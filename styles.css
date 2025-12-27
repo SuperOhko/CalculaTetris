@@ -141,6 +141,13 @@ body{
   border-color: #1a2410;
 }
 
+Chiffre      → move piece
+Opérateur    → rotate
+Clear        → line clear
+Backspace    → piece landed
+Equal        → level up
+
+
 /* Bonus : différencier les touches “fonction” (C, ←, /, *)
    (par ex. class="btn func") */
 /*

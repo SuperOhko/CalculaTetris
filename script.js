@@ -1,6 +1,9 @@
 // Write JavaScript code here
 
 const appendToDisplay = (value) => {
+  if (["+", "-", "*", "/"].includes(value)) sOp();
+  else sTap();
+
   const display = document.getElementById("display");
   display.value += value;
 };

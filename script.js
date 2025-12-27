@@ -12,7 +12,7 @@ const appendToDisplay = (value) => {
     sBack();
   } else {
     sTap();
-  }
+  };
 
   const display = document.getElementById("display");
   display.value += value;

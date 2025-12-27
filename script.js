@@ -4,36 +4,41 @@ const appendToDisplay = (value) => {
     sDot();
   } else if (["+", "-", "*", "/"].includes(value)) {
     sOp();
-  } else if (value === "=") {
-    sEqual();
-  } else if (("C").includes(value)) {
-    sClear();
-  } else if (("←").includes(value)) {
-    sBack();
   } else {
-    sTap();
-  };
+    sTap(); // chiffres
+  }
 
   const display = document.getElementById("display");
   display.value += value;
 };
+.value += value;
+};
 
 
 const clearDisplay = () => {
-    const display = document.getElementById("display");
-    display.value = "";
-}
+  sClear();
+  document.getElementById("display").value = "";
+};
 
 const deleteLast = () => {
-  let display = document.getElementById('display').value;
-  document.getElementById('display').value =
+  sBack();
+  let display = document.getElementById("display").value;
+  document.getElementById("display").value =
     display.substring(0, display.length - 1);
 };
 
+
 const calculateResult = () => {
+  sEqual();
   const display = document.getElementById("display");
-  display.value = eval(display.value);
+
+  try {
+    display.value = eval(display.value);
+  } catch {
+    display.value = "Error";
+  }
 };
+
 
 window.addEventListener("DOMContentLoaded", () => {
   const bgm = document.getElementById("bgm");

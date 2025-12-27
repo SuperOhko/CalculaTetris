@@ -8,6 +8,8 @@ const appendToDisplay = (value) => {
     sEqual();
   } else if (("C").includes(value)) {
     sClear();
+  } else if (("←").includes(value)) {
+    sBack();
   } else {
     sTap();
   }
@@ -70,6 +72,9 @@ const sOp    = makeSoundPool("assets/tetris_rotate_piece.wav");       // + - * /
 const sClear = makeSoundPool("assets/tetris_game_over.wav", 3, 0.35); // C
 const sBack  = makeSoundPool("assets/tetris_piece_landed.wav", 4, 0.40); // ←
 const sEqual = makeSoundPool("assets/tetris_level_up_jingle.wav", 3, 0.35); // =
+const sDot   = makeSoundPool("assets/tetris_menu_sound.wav", 4, 0.4);
+const sError = makeSoundPool("assets/tetris_game_over.wav", 2, 0.35);
+const sCombo = makeSoundPool("assets/tetris_4_lines.wav", 2, 0.45);
 
 
 

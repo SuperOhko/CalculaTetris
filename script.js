@@ -23,7 +23,7 @@ const calculateResult = () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   const bgm = document.getElementById("bgm");
-  bgm.volume = 0.25;
+  bgm.volume = 0.2;
 
   const startMusic = () => {
     bgm.play().catch(() => {});

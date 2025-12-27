@@ -32,11 +32,73 @@ body{
   align-items: center;
   height: 100vh;
 
-  background: var(--shell);
+  background: #1e1e1e; /* fond sombre pour faire ressortir la Game Boy */
   color: var(--gb-ink);
 
   font-family: "Press Start 2P", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
+.gameboy{
+  position: relative;
+
+  width: 420px;   /* ajuste si besoin */
+  height: 740px;  /* ajuste si besoin */
+
+  background-image: url("assets/gameboy.jpg"); /* mets le bon nom */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.screen{
+  position: absolute;
+
+  /* À ajuster selon ton image */
+  top: 115px;
+  left: 60px;
+  width: 300px;
+  height: 260px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;      /* coupe tout ce qui dépasse */
+  border-radius: 8px;    /* coins de l'écran */
+}
+
+.screen .calculator{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 0;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+
+  position: static;
+}
+
+.screen #display{
+  font-size: 16px;
+  padding: 12px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.screen .buttons{
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.screen .btn{
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
 
 /* Boîtier calculatrice (comme un mini Game Boy) */
 .calculator{
@@ -141,14 +203,14 @@ body{
   border-color: #1a2410;
 }
 
-Chiffre      → move piece
+/*Chiffre      → move piece
 Opérateur    → rotate
 Clear        → line clear
 Backspace    → piece landed
 Equal        → level up
 
 
-/* Bonus : différencier les touches “fonction” (C, ←, /, *)
+Bonus : différencier les touches “fonction” (C, ←, /, *)
    (par ex. class="btn func") */
 /*
 .func{

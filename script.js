@@ -1,12 +1,17 @@
 // Write JavaScript code here
-
 const appendToDisplay = (value) => {
-  if (["+", "-", "*", "/"].includes(value)) sOp();
-  else sTap();
+  if (value === ".") {
+    sDot();
+  } else if (["+", "-", "*", "/"].includes(value)) {
+    sOp();
+  } else {
+    sTap();
+  }
 
   const display = document.getElementById("display");
   display.value += value;
 };
+
 
 const clearDisplay = () => {
     const display = document.getElementById("display");

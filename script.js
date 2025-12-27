@@ -4,7 +4,7 @@ const appendToDisplay = (value) => {
     sDot();
   } else if (["+", "-", "*", "/"].includes(value)) {
     sOp();
-  } else if (("=").includes(value)) {
+  } else if (value === "=") {
     sEqual();
   } else if (("C").includes(value)) {
     sClear();

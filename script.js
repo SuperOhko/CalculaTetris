@@ -36,3 +36,29 @@ window.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", startMusic, { once: true });
 });
 
+const makeSoundPool = (src, poolSize = 6, volume = 0.45) => {
+  const pool = Array.from({ length: poolSize }, () => {
+    const a = new Audio(src);
+    a.volume = volume;
+    return a;
+  });
+
+  let i = 0;
+
+  return () => {
+    const a = pool[i];
+    i = (i + 1) % pool.length;
+    a.currentTime = 0;
+    a.play().catch(() => {});
+  };
+};
+
+const sTap   = makeSoundPool("assets/tetris_move_piece.wav");         // chiffres + .
+const sOp    = makeSoundPool("assets/tetris_rotate_piece.wav");       // + - * /
+const sClear = makeSoundPool("assets/tetris_game_over.wav", 3, 0.35); // C
+const sBack  = makeSoundPool("assets/tetris_piece_landed.wav", 4, 0.40); // ←
+const sEqual = makeSoundPool("assets/tetris_level_up_jingle.wav", 3, 0.35); // =
+
+
+
+

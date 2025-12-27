@@ -1,0 +1,150 @@
+/* =========================
+   Game Boy / Tetris Theme
+   ========================= */
+
+/* Optionnel : si on veut une vraie police pixel,
+   ajoutez dans HTML <head> :
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+*/
+
+:root{
+  /* Palette inspirée écran Game Boy */
+  --gb-bg: #c8d19a;
+  --gb-panel: #b7c184;
+  --gb-panel-dark: #9aa56c;
+  --gb-ink: #243018;
+
+  /* Boutons / plastique console */
+  --shell: #d8d8d8;
+  --shell-dark: #a8a8a8;
+  --shadow: rgba(0,0,0,0.25);
+
+  /* Accent “Tetris” */
+  --tetris-accent: #2f3f1c;
+}
+
+/* Corps */
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: var(--shell);
+  color: var(--gb-ink);
+
+  font-family: "Press Start 2P", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Boîtier calculatrice (comme un mini Game Boy) */
+.calculator{
+  width: 480px;
+  padding: 18px;
+  border-radius: 18px;
+
+  background: linear-gradient(180deg, #e6e6e6, #cfcfcf);
+  border: 3px solid var(--shell-dark);
+
+  box-shadow:
+    0 18px 0 rgba(0,0,0,0.10),
+    0 24px 40px var(--shadow);
+
+  /* petit style “plastique” */
+  position: relative;
+}
+
+/* Un petit “label” style console (facultatif) */
+.calculator::before{
+  content: "TETRIS • GB";
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: rgba(0,0,0,0.45);
+}
+
+/* Écran */
+#display{
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 20px;
+  font-size: 26px; /* 30 aussi possible */
+  border: 0;
+
+  text-align: right;
+
+  background: var(--gb-bg);
+  color: var(--gb-ink);
+
+  border-radius: 10px;
+  outline: none;
+
+  /* cadre d'écran */
+  box-shadow:
+    inset 0 0 0 3px var(--gb-panel-dark),
+    inset 0 10px 0 rgba(0,0,0,0.08);
+
+  margin-top: 22px; /* pour ne pas recouvrir le label */
+  margin-bottom: 14px;
+}
+
+/* Grille des boutons */
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 105px);
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Boutons */
+.btn{
+  padding: 20px;
+  font-size: 20px;
+
+  border: 2px solid #303030;
+  border-radius: 10px;
+
+  background: var(--gb-panel);
+  color: var(--gb-ink);
+
+  cursor: pointer;
+
+  /* effet “bouton physique” */
+  box-shadow:
+    0 6px 0 var(--gb-panel-dark),
+    0 10px 18px rgba(0,0,0,0.18);
+
+  transition: transform 0.05s ease, opacity 0.15s ease;
+}
+
+.btn:hover{
+  opacity: 0.8;
+}
+
+/* Effet appui */
+.btn:active{
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 var(--gb-panel-dark),
+    0 6px 12px rgba(0,0,0,0.18);
+}
+
+/* Bouton égal : grand + accent Tetris */
+.equal{
+  grid-column: span 3;
+  background: var(--tetris-accent);
+  color: #dbe7b3;
+  border-color: #1a2410;
+}
+
+/* Bonus : différencier les touches “fonction” (C, ←, /, *)
+   (par ex. class="btn func") */
+/*
+.func{
+  background: #aeb97a;
+}
+*/

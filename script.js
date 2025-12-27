@@ -11,8 +11,7 @@ const appendToDisplay = (value) => {
   const display = document.getElementById("display");
   display.value += value;
 };
-.value += value;
-};
+
 
 
 const clearDisplay = () => {

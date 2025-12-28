@@ -47,10 +47,17 @@ body{
 
 
 .screen{
+  position: absolute;
+
+  /* POSITION DE L'ÉCRAN VERT */
+  top: 205px;
+  left: 430px;
+
   width: 315px;
   height: 263px;
+
   overflow: hidden;
-  position: absolute;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,11 +65,10 @@ body{
 
 
 
+
 .screen .calculator{
   transform-origin: top left;
 }
-
-
 
 
 .screen #display{

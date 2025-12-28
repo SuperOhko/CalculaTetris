@@ -49,9 +49,9 @@ body{
 .screen{
   position: absolute;
 
-  /* POSITION DE L'ÉCRAN VERT */
-  top: 205px;
-  left: 430px;
+  /* POSITION CORRIGÉE DE L'ÉCRAN */
+  top: 245px;     /* descend l'écran */
+  left: 445px;    /* recentre légèrement à droite */
 
   width: 315px;
   height: 263px;
@@ -62,7 +62,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
 
 
 

@@ -47,18 +47,20 @@ body{
 
 .screen{
   position: absolute;
-  top: 172px;     /* 86 * 2 */
-  left: 332px;    /* 166 * 2 */
-  width: 372px;   /* 186 * 2 */
-  height: 340px;  /* 170 * 2 */
+
+  top: 180px;      /* descend un peu */
+  left: 350px;     /* recentre légèrement */
+  width: 340px;    /* réduit largeur */
+  height: 300px;   /* réduit hauteur */
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   overflow: hidden;
-  border-radius: 16px; /* double aussi si tu veux */
+  border-radius: 14px;
 }
+
 
 .screen .calculator{
   width: 100%;
@@ -74,21 +76,20 @@ body{
 
 
 .screen #display{
-  font-size: 18px;
-  padding: 14px;
-  margin-top: 0;
-  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 12px;
+  margin-bottom: 8px;
 }
 
 .screen .buttons{
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 8px;
 }
 
 .screen .btn{
-  padding: 14px;
-  font-size: 16px;
+  padding: 12px;
+  font-size: 14px;
 }
+
 
 
 /* Boîtier calculatrice (comme un mini Game Boy) */

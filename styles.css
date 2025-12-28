@@ -48,7 +48,6 @@ body{
 
 .screen{
   position: absolute;
-  outline: 2px dashed red;
   /* AJUSTEMENT FINAL */
   top: 290px;     /* descend encore un peu */
   left: 460px;    /* décale légèrement à gauche */

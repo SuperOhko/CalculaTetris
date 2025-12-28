@@ -49,9 +49,9 @@ body{
 .screen{
   position: absolute;
   outline: 2px dashed red;
-  /* POSITION CORRIGÉE DE L'ÉCRAN */
-  top: 245px;     /* descend l'écran */
-  left: 445px;    /* recentre légèrement à droite */
+  /* AJUSTEMENT FINAL */
+  top: 260px;     /* descend encore un peu */
+  left: 420px;    /* décale légèrement à gauche */
 
   width: 315px;
   height: 263px;
@@ -62,8 +62,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
-
 
 .screen .calculator{
   transform-origin: top left;

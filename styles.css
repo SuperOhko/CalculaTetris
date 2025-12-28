@@ -50,11 +50,11 @@ body{
   position: absolute;
   outline: 2px dashed red;
   /* AJUSTEMENT FINAL */
-  top: 260px;     /* descend encore un peu */
-  left: 420px;    /* décale légèrement à gauche */
+  top: 270px;     /* descend encore un peu */
+  left: 440px;    /* décale légèrement à gauche */
 
-  width: 315px;
-  height: 263px;
+  width: 300px;
+  height: 250px;
 
   overflow: hidden;
 
@@ -103,8 +103,8 @@ body{
 
 /* Boîtier calculatrice (comme un mini Game Boy) */
 .calculator{
-  width: 480px;
-  padding: 18px;
+  width: 420px;
+  padding: 10px;
   border-radius: 18px;
 
   background: linear-gradient(180deg, #e6e6e6, #cfcfcf);
@@ -159,14 +159,14 @@ body{
 .buttons{
   display: grid;
   grid-template-columns: repeat(4, 105px);
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
 }
 
 /* Boutons */
 .btn{
-  padding: 20px;
-  font-size: 20px;
+  padding: 16px;
+  font-size: 16px;
 
   border: 2px solid #303030;
   border-radius: 10px;

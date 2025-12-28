@@ -40,25 +40,19 @@ body{
 
 .gameboy{
   position: relative;
-  width: 1040px;
-  aspect-ratio: 1 / 1;              /* car l'image est carrée */
+  width: 1200px;
+  aspect-ratio: 1 / 1;
   background: url("assets/gameboy2.jpg") center/contain no-repeat;
 }
 
+
 .screen{
   position: absolute;
-
-  top: 180px;      /* descend un peu */
-  left: 350px;     /* recentre légèrement */
-  width: 340px;    /* réduit largeur */
-  height: 300px;   /* réduit hauteur */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  top: 16.54%;
+  left: 31.92%;
+  width: 35.77%;
+  height: 32.69%;
   overflow: hidden;
-  border-radius: 14px;
 }
 
 

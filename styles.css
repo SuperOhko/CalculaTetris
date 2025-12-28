@@ -40,7 +40,7 @@ body{
 
 .gameboy{
   position: relative;
-  width: 520px;
+  width: 1040px;
   aspect-ratio: 1 / 1;              /* car l'image est carrée */
   background: url("assets/gameboy2.jpg") center/contain no-repeat;
 }

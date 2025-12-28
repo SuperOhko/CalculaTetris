@@ -71,25 +71,48 @@ body{
   border: none;
   box-shadow: none;
   border-radius: 0;
-  position: static;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  /* IMPORTANT : on ignore le width:480px global */
+  max-width: none;
 }
+
 
 
 .screen #display{
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px;
-  margin-bottom: 8px;
+
+  margin: 0;
+  border-radius: 8px;
 }
+
 
 .screen .buttons{
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* au lieu de 105px */
   gap: 8px;
+
+  justify-content: stretch;
+  align-content: stretch;
 }
+
 
 .screen .btn{
-  padding: 12px;
+  padding: 10px;
   font-size: 14px;
+  border-radius: 8px;
 }
 
+.screen .equal{
+  grid-column: span 3;
+}
 
 
 /* Boîtier calculatrice (comme un mini Game Boy) */

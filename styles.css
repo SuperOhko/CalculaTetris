@@ -48,7 +48,7 @@ body{
 
 .screen{
   position: absolute;
-
+  outline: 2px dashed red;
   /* POSITION CORRIGÉE DE L'ÉCRAN */
   top: 245px;     /* descend l'écran */
   left: 445px;    /* recentre légèrement à droite */
